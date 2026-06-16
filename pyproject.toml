@@ -1,0 +1,21 @@
+[project]
+name = "dispatch-quote-cache-correctness"
+version = "0.1.0"
+description = "Manager-worker dispatch quote workflow with Redis-backed agent memoization"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "redis",
+    "pydantic",
+    "pytest",
+    "httpx",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
